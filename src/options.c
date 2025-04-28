@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-bool setup_options(options_t *options, char **av)
+static bool setup_options(options_t *options, char **av)
 {
     int villagers = atoi(av[1]);
     int pot_size = atoi(av[2]);
