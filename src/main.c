@@ -12,16 +12,16 @@
 int main(int ac, char **av)
 {
     options_t options = get_options(ac, av);
+    int option_handler_result = handle_options(&options);
+    panoramix_t *panoramix = NULL;
 
-    if (options.help || options.args_error || options.value_error) {
-        printf(
-            "USAGE: ./panoramix <nb_villagers> <pot_size> <nb_fights> "
-            "<nb_refills>\n");
-        if (options.value_error)
-            printf("Values must be >0.\n");
-        if (options.args_error || options.value_error)
-            return 84;
-        return 0;
+    if (option_handler_result != -1)
+        return option_handler_result;
+    panoramix = setup_panoramix(&options);
+    if (start_simulation(panoramix) == 84) {
+        destroy_panoramix(panoramix);
+        return 84;
     }
+    destroy_panoramix(panoramix);
     return 0;
 }
