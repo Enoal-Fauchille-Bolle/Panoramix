@@ -22,5 +22,6 @@ typedef struct options_s {
 } options_t;
 
 options_t get_options(int ac, char **av);
+int handle_options(options_t *options);
 
 #endif /* !OPTIONS_H_ */
