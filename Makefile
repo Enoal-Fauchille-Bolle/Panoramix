@@ -11,6 +11,7 @@ SRC_DIR =	src
 SRC	=	\
 		$(SRC_DIR)/main.c	\
 		$(SRC_DIR)/options.c	\
+		$(SRC_DIR)/pot.c	\
 
 NAME	=	panoramix
 
