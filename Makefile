@@ -12,6 +12,7 @@ SRC	=	\
 		$(SRC_DIR)/main.c	\
 		$(SRC_DIR)/options.c	\
 		$(SRC_DIR)/villager.c	\
+		$(SRC_DIR)/druid.c	\
 		$(SRC_DIR)/pot.c	\
 
 NAME	=	panoramix
